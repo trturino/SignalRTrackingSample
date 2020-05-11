@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:SignalRTrackingSampleApp.Views"
+             x:Class="SignalRTrackingSampleApp.Views.MainPage">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Send Location"
+                          Detail="Start sending your location to Hub"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SendLocationPage}" />
+
+                <TextCell Text="View Location"
+                          Detail="View location being sent to hub in real time"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ViewLocationPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
